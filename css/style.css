@@ -38,3 +38,49 @@ body{
   background-color: #6AD9A3;
   border-radius: 5px;
 }
+.step-form > form {
+  display: flex;
+  flex-direction: column;
+}
+.step-form > form > label{
+  margin-bottom: 3px;
+  color: #39474D;
+}
+.step-form > form > input{
+  height: 32px;
+  padding: 8px;
+  outline: none;
+  margin-bottom: 12px;
+  border: 1px solid #DCE4ED;
+}
+.step-form > form > button{
+  height: 48px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #39474D;
+  outline: none;
+  border: none;
+  color: #DCE4ED;
+  font-weight: 500;
+}
+.flex-btn{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-btn > button{
+  width: 50%;
+  height: 48px;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #F3F6F9;
+
+}
+.flex-btn > button:first-child{
+  background-color: #F3F6F9;
+  color:#39474D ;
+}
+.flex-btn > button:nth-child(2){
+  background-color: #39474D;
+  color: #DCE4ED;
+}
