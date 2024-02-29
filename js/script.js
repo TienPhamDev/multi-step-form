@@ -1,6 +1,16 @@
 const nextBTN = document.querySelector(".btn-next");
 const multiStep= document.querySelector(".multi-step")
 const multiStepChild = multiStep.children;
+function switchStep(multiStep,StepId,nextOrPrevStepID,changeProgress) {
+  for (let i = 0; i < multiStep.length; i++) {
+    if (multiStep[i].id === StepId) {
+      multiStep[i].style.display = "none";
+      multiStep[i + 1].style.display = "block";
+      const selectProgressBar = document.querySelector(`#${nextOrPrevStepID} > .progress-bar > .progress-bar-slide`);
+      selectProgressBar.style.width = changeProgress;
+    }
+  }
+};
 multiStep.addEventListener("click", (e) => {
   if (e.target.className === "btn-next") {
     for (let i = 0; i < multiStepChild.length; i++) {
