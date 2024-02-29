@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Multi step form></form></title>
 </head>
 <body>
-  <main>
+  <main class="container">
     <div class="step-1">
       <h1>Tell us a little about yourself</h1>
       <span class="progress-bar"><span class="progress-bar-slide"></span></span>
@@ -16,7 +17,7 @@
         <button type="button" name="next">Next</button>
       </form>
     </div>
-    <div class="step-1">
+    <div class="step-2" style="display: none;">
       <h1>Tell us a little about yourself</h1>
       <span class="progress-bar"><span class="progress-bar-slide"></span></span>
       <form action="">
@@ -26,13 +27,14 @@
         <button type="button" name="next">Next</button>
       </form>
     </div>
-    <div class="step-1">
+    <div class="step-3" style="display: none;">
       <h1>Tell us a little about yourself</h1>
       <span class="progress-bar"><span class="progress-bar-slide"></span></span>
       <form action="">
-        <label for="name">Phone :</label>
-        <input type="text" name="name">
-        <button type="button" name="next">Next</button>
+        <label for="phone">Phone :</label>
+        <input type="text" name="phone">
+        <button type="button" name="previous">Previous</button>
+        <button type="submit" name="next">Submit</button>
       </form>
     </div>
   </main>
