@@ -12,41 +12,45 @@
 </head>
 <body>
   <main class="container">
-    <div class="step-1 step-form" style="display: none;" >
-      <h1>Tell us a little about yourself</h1>
-      <span class="progress-bar"><span class="progress-bar-slide"></span></span>
-      <form action="">
-        <label for="name">Name :</label>
-        <input type="text" name="name">
-        <button type="button" name="next">Next</button>
-      </form>
-    </div>
-    <div class="step-2 step-form" style="display: block;">
-      <h1>Tell us a little about yourself</h1>
-      <span class="progress-bar"><span class="progress-bar-slide"></span></span>
-      <form action="">
-        <label for="email">Email :</label>
-        <input type="text" name="email">
-        <div class="flex-btn">
-          <button type="button" name="previous">Previous</button>
-          <button type="button" name="next">Next</button>
+    <div class="multi-step">
 
-        </div>
-      </form>
-    </div>
-    <div class="step-3 step-form" style="display: none;">
-      <h1>Tell us a little about yourself</h1>
-      <span class="progress-bar"><span class="progress-bar-slide"></span></span>
-      <form action="">
-        <label for="phone">Phone :</label>
-        <input type="text" name="phone">
-        <div class="flex-btn">
-          <button type="button" name="previous">Previous</button>
-          <button type="submit" name="next">Submit</button>
-
-        </div>
-      </form>
+      <div class="step-form" id="step1" style="display: block;" >
+        <h1>Tell us a little about yourself</h1>
+        <span class="progress-bar"><span class="progress-bar-slide"></span></span>
+        <form action="">
+          <label for="name">Name :</label>
+          <input type="text" name="name" value="" class="input-name">
+          <button type="button" name="next" class="btn-next">Next</button>
+        </form>
+      </div>
+      <div class="step-form" id="step2" style="display: none;">
+        <h1>Tell us a little about yourself</h1>
+        <span class="progress-bar"><span class="progress-bar-slide"></span></span>
+        <form action="">
+          <label for="email">Email :</label>
+          <input type="text" name="email" value="" class="input-email">
+          <div class="flex-btn">
+            <button type="button" name="previous" class="btn-2-previous">Previous</button>
+            <button type="button" name="next" class="btn-next">Next</button>
+            
+          </div>
+        </form>
+      </div>
+      <div class="step-form" id="step3" style="display: none;">
+        <h1>Tell us a little about yourself</h1>
+        <span class="progress-bar"><span class="progress-bar-slide"></span></span>
+        <form action="">
+          <label for="phone">Phone :</label>
+          <input type="text" name="phone" value="" class="input-phone">
+          <div class="flex-btn">
+            <button type="button" name="previous" class="btn-3-previous">Previous</button>
+            <button type="submit" name="submit" class="btn-submit">Submit</button>
+            
+          </div>
+        </form>
+      </div>
     </div>
   </main>
+  <script src="js/script.js"></script>
 </body>
 </html>
