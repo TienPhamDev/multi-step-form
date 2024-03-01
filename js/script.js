@@ -1,5 +1,11 @@
 const nextBTN = document.querySelector(".btn-next");
-const multiStep= document.querySelector(".multi-step")
+const multiStep = document.querySelector(".multi-step");
+const inputName = document.querySelector("#step1 > form > input");
+const inputEmail = document.querySelector("#step2 > form > input");
+const inputPhone = document.querySelector("#step3 > form >input");
+const warningName = document.querySelector("#step1 > h4");
+const warningEmail = document.querySelector("#step2 > h4");
+const warningPhone = document.querySelector("#step3 > h4");
 const multiStepChild = multiStep.children;
 function nextStep(multiStep,StepId,nextStepID,changeProgress) {
   for (let i = 0; i < multiStep.length; i++) {
@@ -23,12 +29,24 @@ function prevStep(multiStep,StepId,prevStepID,changeProgress) {
  };
 multiStep.addEventListener("click", (e) => {
   if (e.target.className === "btn-next") {
-    nextStep(multiStepChild,"step1","step2","66.66%");
+    if (inputName.value === "") {
+      warningName.classList.remove("hidden");
+    } else {
+      warningName.classList.add("hidden");
+      nextStep(multiStepChild, "step1", "step2", "66.66%");
+    }
   } else if (e.target.className === "btn-next-2") {
-    nextStep(multiStepChild,"step2","step3","100%");
+    if (inputName.value === "") {
+      warningEmail.classList.remove("hidden");
+    }else {
+      warningEmail.classList.add("hidden");
+      nextStep(multiStepChild, "step2", "step3", "100%");
+    }
+    
   } else if (e.target.className === "btn-previous-2") {
-    prevStep(multiStepChild,"step2","step1","33.33%");
+    prevStep(multiStepChild, "step2", "step1", "33.33%");
   } else if (e.target.className === "btn-previous-3") {
-    prevStep(multiStepChild,"step3","step1","66.66%");
+    prevStep(multiStepChild, "step3", "step2", "66.66%");
   }
+  
 });

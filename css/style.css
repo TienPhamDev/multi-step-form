@@ -8,7 +8,12 @@ body{
   justify-content: center;
 
 }
-
+.hidden{
+  display: none;
+}
+.show{
+  display: block;
+}
 .step-form{
   margin-top: 72px;
   padding: 32px;
